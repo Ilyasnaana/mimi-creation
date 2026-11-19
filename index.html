@@ -534,6 +534,7 @@ footer .flogo i{font-family:var(--script);font-style:normal;font-size:1.6rem;col
 </aside>
 <div class="toast" id="toast" hidden role="status"></div>
 
+<script src="produits.js"></script>
 <script>
 (function(){
 const COLORS=[
@@ -554,20 +555,7 @@ const COLORS=[
  {k:"moutarde",hex:"#b88a2a",fr:"Moutarde",ar:"خردلي"}
 ];
 const SIZES=["36","38","40","42","44","46","48","50"];
-const PRODUCTS=[
- {id:"lilia",prix:4800,prixEur:30,kg:1.0,def:"blanc",opt:0,nouveau:true,
-  fr:{nom:"Robe Lilia",type:"Satin · ceinture nouée",desc:"Satin fluide, plastron brodé, grande ceinture nouée à la taille et manches évasées doublées. Disponible en 7 couleurs, chacune avec sa ceinture assortie. Touchez une couleur pour voir la vraie photo de la robe. Cousue sur commande."},
-  ar:{nom:"فستان ليليا",type:"ساتان · حزام معقود",desc:"ساتان منساب، صدر مطرّز، حزام كبير معقود على الخصر وأكمام واسعة مبطّنة. متوفر بـ7 ألوان، لكل لون حزامه المتناسق. المسي لونا لرؤية الصورة الحقيقية للفستان. يُخاط حسب الطلب."},
-  colors:["blanc","emeraude","bordeaux","canard","rose","beige","prune"],views:[{k:"p1",fr:"Photo",ar:"صورة",src:"lilia-d",alt:{emeraude:"lilia-emeraude",bordeaux:"lilia-bordeaux",canard:"lilia-canard",rose:"lilia-rose",beige:"lilia-beige",prune:"lilia-prune"}}]},
- {id:"nassima",prix:4800,prixEur:30,kg:1.2,def:"noir",opt:0,nouveau:true,
-  fr:{nom:"Robe Nassima",type:"Satin damassé · dentelle",desc:"Robe kabyle en satin damassé, plastron en dentelle bordé de galons rouges, bleus et jaunes, manches courtes en dentelle et bas de robe à double galon. Disponible en 7 couleurs, chacune avec sa ceinture à pompons assortie. Touchez une couleur pour voir la vraie photo. Cousue sur commande."},
-  ar:{nom:"فستان نسيمة",type:"ساتان مزخرف · دانتيل",desc:"جبة قبائلية من الساتان المزخرف، صدر من الدانتيل بأشرطة حمراء وزرقاء وصفراء، أكمام قصيرة من الدانتيل وأسفل الفستان بشريطين. متوفر بـ7 ألوان، لكل لون حزامه بالشراشيب المتناسق. المسي لونا لرؤية الصورة الحقيقية. يُخاط حسب الطلب."},
-  colors:["noir","emeraude","bordeaux","canard","fuchsia","beige","prune"],views:[{k:"p1",fr:"Photo",ar:"صورة",src:"nassima-a",raw:true,noAccent:true,alt:{emeraude:"nassima-emeraude",bordeaux:"nassima-bordeaux",canard:"nassima-canard",fuchsia:"nassima-fuchsia",beige:"nassima-beige",prune:"nassima-prune"}}]},
- {id:"yasmine",prix:4800,prixEur:30,kg:1.0,def:"sauge",opt:0,nouveau:true,
-  fr:{nom:"Robe Yasmine",type:"Crêpe · ceinture en satin",desc:"Robe kabyle en crêpe fluide, encolure carrée brodée de motifs kabyles et frangée de perles colorées, manches évasées doublées de satin ivoire, grande ceinture en satin nouée à la taille. Disponible en 8 couleurs, chacune avec sa ceinture assortie. Touchez une couleur pour voir la vraie photo. Cousue sur commande."},
-  ar:{nom:"فستان ياسمين",type:"كريب · حزام من الساتان",desc:"جبة قبائلية من الكريب المنساب، ياقة مربعة مطرّزة برموز قبائلية ومزينة بحبات ملونة، أكمام واسعة مبطّنة بساتان عاجي، وحزام كبير من الساتان معقود على الخصر. متوفر بـ8 ألوان، لكل لون حزامه المتناسق. المسي لونا لرؤية الصورة الحقيقية. يُخاط حسب الطلب."},
-  colors:["sauge","nuit","bordeaux","noir","beige","rosep","emeraude","violet"],cname:{beige:{fr:"Beige",ar:"بيج",kab:"Beige"},emeraude:{fr:"Vert émeraude",ar:"أخضر زمردي",kab:"Azegzaw"}},belt:{sauge:"blanc",nuit:"nuit",bordeaux:"bordeaux",noir:"noir",beige:"beige",rosep:"rosep",emeraude:"emeraude",violet:"violet"},beltName:{emeraude:{fr:"Vert foncé",ar:"أخضر داكن",kab:"Azegzaw aḥerfi"},beige:{fr:"Champagne",ar:"شمباني",kab:"Champagne"},noir:{fr:"Noire",ar:"أسود",kab:"Taberkant"}},views:[{k:"p1",fr:"Photo",ar:"صورة",src:"yasmine-a",raw:true,noAccent:true,alt:{nuit:"yasmine-nuit",bordeaux:"yasmine-bordeaux",noir:"yasmine-noir",beige:"yasmine-beige",rosep:"yasmine-rosep",emeraude:"yasmine-emeraude",violet:"yasmine-violet"}}]}
-];
+const PRODUCTS=window.MC_PRODUCTS;
 const STORY_DEFAULT={
  zineb:"Lalla Zineb, c'est la robe des grandes soirées de famille, celles où l'on sort le plus beau velours.\n\nJ'ai voulu une ligne de broderie qui descend comme un collier jusqu'au bas de la robe, et une ceinture à pièces qui chante quand on danse.\n\n« Une robe pour être regardée, et pour se souvenir. »",
  tafsut:"Tafsut veut dire « printemps » en kabyle. C'est la robe des retrouvailles, des fiançailles et des beaux jours.\n\nLa fouta portée en biais rappelle celles de nos grands-mères, et les galons du bas reprennent les motifs de nos villages.\n\n« Le printemps se porte aussi. »",
